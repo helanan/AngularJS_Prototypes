@@ -1,24 +1,40 @@
 <!DOCTYPE>
-<html lang="eng" ng-app="myApp">
+<html lang="eng" ng-app="seniorLiving">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Senior Living</title>
+    <title>Welcome</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="applie-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="/ch01/css/welcome.css">
 </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-            <![endif]-->
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
-        <script src="/lib/myApp.js"></script>
+        <div ng-controller="FirstController">
+            <span>Name:</span>
+            <input type="text" ng-model="first">
+            <input type="text" ng-model="last">
+            <button ng-click='updateMessage()'>Message</button>
+            <hr>
+            {{heading + message}}
+        </div><hr>
+        <div ng-controller="secondController">
+            <h2>Alert</h2>
+        </div><hr>
+        <div ng-controller="fourthController">
+            <h2>Application Message:</h2>
+            {{message}}
+        </div><hr>
+        <div ng-controller="thirdController">
+            <h2>Module Message</h2>
+            {{message}}
+        </div><hr>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script src="/ch01/js/first.js"></script>
+        <!-- <script src="/ch01/js/second.js"></script> -->
     </body>
 </html>
