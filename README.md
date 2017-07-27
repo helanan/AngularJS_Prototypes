@@ -1,2 +1,2 @@
-# Senior_Living
-An app that helps assist senior living facilities
+# AngularJS Prototype Wireframes
+A collection of AngularJS prototypes I created in order to easily use in any future front-end project.
