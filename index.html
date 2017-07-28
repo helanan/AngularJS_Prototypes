@@ -14,6 +14,7 @@
     <body>
         <!-- Add your site or application content here -->
         <div ng-controller="FirstController">
+            <h2>Application Level Controller One Message</h2><hr>
             <span>Name:</span>
             <input type="text" ng-model="first">
             <input type="text" ng-model="last">
@@ -22,19 +23,49 @@
             {{heading + message}}
         </div><hr>
         <div ng-controller="secondController">
-            <h2>Alert</h2>
+            <h2>Application Level Alert</h2>
         </div><hr>
         <div ng-controller="fourthController">
-            <h2>Application Message:</h2>
+            <h2>Application Level Controller Two Message:</h2>
             {{message}}
+        </div><hr>
+        <div ng-controller="fifthController">
+            <h2>Application Config Time</h2>
+            {{configTime}}
+            <hr>
+            <h2>Application Run Time:</h2>
+            {{runTime}}
         </div><hr>
         <div ng-controller="thirdController">
-            <h2>Module Message</h2>
+            <h2>Module One Message</h2>
             {{message}}
         </div><hr>
+        <div ng-controller="counterController">
+            <h2>Application Level Increments & Decrements</h2>
+            <span>Change Amount:</span>
+            <input type="number" ng-model="change"><hr>
+            <span>Starting Value:</span>
+            {{start}}
+            <br>
+            <span>CurrentValue:</span>
+            {{current}}
+            <button ng-click='inc()'>+</button>
+            <button ng-click='dec()'>-</button><hr>
+            <span>Difference:</span>
+            {{difference}}
+        </div><hr>
+        <div ng-controller="calcController">
+            ValueA: <input type="number" ng-model="valueA" /><br>
+            ValueB: <input type="number" ng-model="valueB" /><br><br>
+            Expression: {{valueA}} + {{valueB}}<br><br>
+            Live Expression Value: {{valueA + valueB}}<br><br>
+            <input type="button" ng-click="addValues(valueA, valueB)"
+            value = "click to Add Values {{valueA}} & {{valueB}}" /><br>
+            Clicked Expression Value: {{valueC}}<br>
+        </div>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
         <script src="/ch01/js/first.js"></script>
-        <!-- <script src="/ch01/js/second.js"></script> -->
+        <script src="/ch01/js/second.js"></script>
     </body>
 </html>
